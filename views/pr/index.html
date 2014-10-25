@@ -67,11 +67,26 @@ $('#show-add-btn').hide()'''}}
 {{script = '''$('#show-add-btn').click(function(){$('#list-add').show()
  $('#show-add-btn').hide()})'''}}
 {{pass}}{{s3.jquery_ready.append(script)}}
+<script>
+   var t = Date.now();
+</script>
 {{if s3.debug:}}
 <link href="/{{=appname}}/static/styles/plugins/jquery.jqplot.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />
+<!--
 <script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jquery.jqplot.js"></script>
 <script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jqplot_plugins/jqplot.pieRenderer.js"></script>
+-->
 <!-- @ToDo: Replace with https://github.com/SlexAxton/yepnope.js -->
+
+<script src = "LAB.js"></script>
+<script>
+$LAB
+.script("/{{=appname}}/static/scripts/jquery.jqplot.js")
+.scirpt("/{{=appname}}/static/scripts/jqplot_plugins/jqplot.pieRender.js")
+{
+  initMyPage()
+};
+</script>
 <!--[if IE]><script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/S3/excanvas.js"></script><![endif]-->
 {{else:}}
 <link href="/{{=appname}}/static/styles/plugins/jquery.jqplot.min.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />
@@ -81,6 +96,7 @@ $('#show-add-btn').hide()'''}}
 {{pass}}
 <script type="text/javascript" language="javascript">//<![CDATA[
 $(document).ready(function(){
+    console.log(Date.now()-t);
     var gender = {{try:}}{{=XML(gender)}}{{except:}}0{{pass}};
     var age = {{try:}}{{=XML(age)}}{{except:}}0{{pass}};
 
