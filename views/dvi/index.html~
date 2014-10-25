@@ -37,13 +37,14 @@
 var t = Date.now();
 </script>
 {{if s3.debug:}}
-<script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jquery.jqplot.js"></script>
-<script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jqplot_plugins/jqplot.pieRenderer.js"></script>
+<!-- <script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jquery.jqplot.js"></script>
+<script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jqplot_plugins/jqplot.pieRenderer.js"></script> -->
 <!-- @ToDo: Replace with https://github.com/SlexAxton/yepnope.js -->
 <!--[if IE]><script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/S3/excanvas.js"></script><![endif]-->
 {{else:}}
-<script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jquery.jqplot.min.js"></script>
-<script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jqplot_plugins/jqplot.pieRenderer.min.js"></script>
+<script data-main="/{{=appname}}/static/scripts/main" src="/{{=appname}}/static/scripts/require.js"></script>
+<!-- <script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jquery.jqplot.min.js"></script>
+<script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/jqplot_plugins/jqplot.pieRenderer.min.js"></script> -->
 <!--[if IE]><script language="javascript" type="text/javascript" src="/{{=appname}}/static/scripts/S3/excanvas.min.js"></script><![endif]-->
 {{pass}}
 <script type="text/javascript" language="javascript">//<![CDATA[

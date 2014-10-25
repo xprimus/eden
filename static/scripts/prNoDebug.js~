@@ -1,0 +1,22 @@
+require( ["jquery.jqplot", "jquery.pierenderer"],
+    function ($) {
+      alert("test");
+    }
+  );
+
+
+<script src="/{{=appname}}/static/scripts/require.js"></script>
+<script type="text/javascript">
+  require.config({
+    paths: {
+        "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min",
+	"jquery.jqplot": "/{{=appname}}/static/scripts/jquery.jqplot.min",
+	"jquery.pierenderer": "/{{=appname}}/static/scripts/jqplot_plugins/jqplot.pieRenderer.min"
+    }
+  });
+</script>
+
+
+
+
+console.log(Date.now()-t);    

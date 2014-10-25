@@ -1,0 +1,19 @@
+<script src="http://requirejs.org/docs/release/2.1.5/comments/require.js"></script>
+<script type="text/javascript">
+  require.config({
+    paths: {
+        "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min"
+    },
+    waitSeconds: 40
+  });
+</script>
+
+<div id="message">hello</div>
+
+<script type="text/javascript">
+  require( ["jquery"],
+    function ($) {
+      alert($.fn.jquery + "\n" + $("#message").text());
+    }
+  );
+</script>
